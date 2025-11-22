@@ -1,12 +1,17 @@
 import React from 'react';
 import {
-    View, Text, StyleSheet} from 'react-native';
+    Pressable,
+    ScrollView,
+    StyleSheet,
+    Text,
+    View
+} from 'react-native';
 
 export default function ToDoList({ tasks = [] }) {
     return (
         <ScrollView>
             {tasks.map((task) => (
-                <Pressable>
+                <Pressable key={index}>
                     <View style={[styles.task, styles.incomplete]}>
                         <Text style={styles.taskText}>{task.text}</Text>
                     </View>
